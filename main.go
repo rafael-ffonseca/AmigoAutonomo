@@ -15,7 +15,11 @@ func main() {
 		AllowCredentials: true,
 		AllowHeaders:     []string{"*"},
 	}))
+	
 	InitRoutes(router)
+	InitSwagger(router)
+
 	servicePort := config.GetPropFromServiceSection().ServicePort
+
 	log.Fatal(router.Run(":" + servicePort))
 }

@@ -15,5 +15,4 @@ type Users struct {
 	Phones				[]UserPhones `gorm:"foreignKey:UserId"`
 	Address				UserAddress `gorm:"foreignKey:UserId"`
 	Document			string
-
 }

@@ -3,5 +3,6 @@ package interfaces
 import "AmigoAutonomo/entities"
 
 type IUserRepository interface {
-	GetUserLogin(UserLogin string, UserPass string) (*entities.Users, error)
+	GetUserByLogin(username string, password string) (*entities.Users, error)
+	CreateUser(*entities.Users) error
 }

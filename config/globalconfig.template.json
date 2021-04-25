@@ -1,0 +1,13 @@
+{
+	"Service": {
+		"ServicePort": "1900",
+		"SchedulerInMinutes": 1,
+		"DatabaseHost": "127.0.0.1",
+		"DatabasePort": "3306",
+		"DatabaseUser": "root",
+		"DatabasePassword": "123456",
+		"DatabaseName": "AmigoAutonomo",
+		"LogDatabasePath": "\\logs\\",
+		"Homologation": false
+	}
+}

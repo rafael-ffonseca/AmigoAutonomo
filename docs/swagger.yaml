@@ -1,0 +1,42 @@
+definitions:
+  models.GetRequestLoginOutput:
+    properties:
+      email:
+        type: string
+      firstName:
+        type: string
+      id:
+        type: integer
+      lastName:
+        type: string
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /login:
+    get:
+      consumes:
+      - application/json
+      description: Authenticate and Provides User JWT Token
+      parameters:
+      - in: query
+        name: password
+        type: string
+      - in: query
+        name: username
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.GetRequestLoginOutput'
+        "400":
+          description: Username or Password does not match
+          schema:
+            type: string
+      summary: Request to login user
+swagger: "2.0"

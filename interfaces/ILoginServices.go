@@ -1,5 +1,9 @@
 package interfaces
 
+import (
+	"AmigoAutonomo/models"
+)
+
 type ILoginServices interface {
-	DoLogin() error
+	DoLogin() (*models.GetRequestLoginOutput, error)
 }
